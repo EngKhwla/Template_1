@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Template_1</title>
+@*    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+*@    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Template_1.styles.css" asp-append-version="true" />
+    <!--render all element normally-->
+    <link rel="stylesheet" href="~/Template_1.styles.css" asp-append-version="true" />
+    <!--font awesome-->
+    <link rel="stylesheet" href="~/css/all.min.css" />
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--start header-->
+    <header>
+        
+      <div class="header" >
+        <img class="logo" src="~/images/assest/logo.png" alt="logo img"/>
+        <div class="links">
+            <span class="icons">
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </span>
+            <ul>
+                <li ><a href="#services">Services</a></li>
+                <li ><a href="#portfolio">Portfolio</a></li>
+                <li ><a href="#about">About</a></li>
+                <li ><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+      </div>   
+    </header>
+    
+   
+
+
+    <div ><!--we delete class container that was threre-->
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="footer">
+            &copy; 2024 - <span>leon</span> - All rights resaved        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
